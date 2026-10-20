@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "gpu-offload"
+version = "0.1.0"
+description = "Minimal example of using MLIR to compile to PTX and evaluate on the GPU"
+authors = ["sdiehl <stephen.m.diehl@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+mlir-python-bindings = { version = "21.0.0.2025031701+4fde8c34 ", source = "mlir-wheels"}
+pyyaml = "^6.0.2"
+numpy = "^2.2.4"
+
+[[tool.poetry.source]]
+name = "mlir-wheels"
+url = "https://github.com/makslevental/mlir-wheels/releases/expanded_assets/latest"
+priority = "supplemental"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.5"
+black = "^25.1.0"
+
+[tool.poetry.group.gpu.dependencies]
+cuda-python = "^12.8.0"

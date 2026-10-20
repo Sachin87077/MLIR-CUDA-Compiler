@@ -1,0 +1,8 @@
+*.sw[pon]
+*.pyc
+*.pyo
+.DS_Store
+.venv
+.mypy_cache
+.ruff_cache
+__pycache__
